@@ -3,3 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  padding: 0 100px;
+  font-family: "Cairo", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Lobster", cursive;
+  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Urbanist", sans-serif;
+}
+
