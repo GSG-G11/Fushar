@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import "./nav.css";
+import React, { useState } from 'react';
+import './nav.css';
+import appIcon from './popcorn.png';
 
 function Nav() {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
 
   const handleInputValue = (e) => {
     e.preventDefault();
@@ -12,7 +13,7 @@ function Nav() {
   return (
     <nav>
       <div className="logo">
-        <i>icon</i>
+        <img className='app-icon' src={appIcon} />
         <h1>Fushar</h1>
       </div>
       <form className="search" onSubmit={(e) => handleInputValue(e)}>
