@@ -15,7 +15,7 @@ function SearchResults(props) {
             <p>{movie.Type}</p>
           </div>
         ) 
-      }): <h5 style={{marginTop: '50px', fontSize: '20px'}}>Try Again</h5>}
+      }): <h5 style={{marginTop: '50px', fontSize: '20px'}}>No Result Found</h5>}
     </div>
   );
 }
