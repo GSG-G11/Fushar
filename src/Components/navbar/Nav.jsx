@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import './nav.css';
+import React from 'react';
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import appIcon from './popcorn.png';
+import "./nav.css";
 
-function Nav() {
-  const [inputValue, setInputValue] = useState('');
+function Nav(props) {
+  const { handleInputValue, setInputValue } = props;
 
-  const handleInputValue = (e) => {
-    e.preventDefault();
-    setInputValue(e.target[0].value);
+  let navigate = useNavigate();
+  const submit = (e) => {
+    navigate("/search");
+    handleInputValue(e);
   };
 
   return (
@@ -16,13 +19,21 @@ function Nav() {
         <img className='app-icon' src={appIcon} />
         <h1>Fushar</h1>
       </div>
-      <form className="search" onSubmit={(e) => handleInputValue(e)}>
-        <input placeholder="search..." name="search" />
+      <form className="search" onSubmit={submit}>
+        <input
+          placeholder="search..."
+          name="search"
+          onChange={(e) => setInputValue(e.target.value)}
+        />
         <button type="submit">Search</button>
-        <p>{inputValue}</p>
       </form>
     </nav>
   );
 }
+
+Nav.propTypes = {
+  handleInputValue: PropTypes.func.isRequired,
+  setInputValue: PropTypes.string.isRequired,
+};
 
 export default Nav;
