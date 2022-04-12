@@ -4,6 +4,7 @@ import "./App.css";
 import axios from "axios";
 import Nav from "./Components/navbar/Nav";
 import SearchResults from "./Components/SearchResults/SearchResults";
+import CardContainer from './Components/cardContainer/CardContainer';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         />
         <hr />
         <Routes>
+        <Route path="/" element={<CardContainer />} />
           <Route path="/search" element={<SearchResults results={results} />} />
         </Routes>
       </Router>

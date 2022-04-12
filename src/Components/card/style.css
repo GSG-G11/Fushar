@@ -1,0 +1,33 @@
+.movie-top-card {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.2s ease-in-out;
+}
+.movie-top-card .movie-poster {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+.movie-top-card .movie-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  gap: 8px;
+}
+
+.movie-top-card .movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.movie-top-card .movie-overview {
+  line-height: 1.2;
+}
+.movie-top-card:hover {
+  transform: scale(1.1);
+}
+
+

@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import appIcon from './popcorn.png';
 import "./nav.css";
 
 function Nav(props) {
@@ -15,7 +16,7 @@ function Nav(props) {
   return (
     <nav>
       <div className="logo">
-        <i>icon</i>
+        <img className='app-icon' src={appIcon} />
         <h1>Fushar</h1>
       </div>
       <form className="search" onSubmit={submit}>
