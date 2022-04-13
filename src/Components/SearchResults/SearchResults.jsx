@@ -2,10 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import ResultCard from "../resultsCard/ResultCard";
 import './SearchResults.css'
+import Loading from '../loading/Loading';
 
 function SearchResults(props) {
-  const { results } = props;
+  const { results, loading } = props;
 
+if(loading) {
+  return (
+    <div className="container">
+      <Loading />
+    </div>
+  );
+}
   return (
     <div className="container">
       {results ? (
@@ -22,7 +30,8 @@ function SearchResults(props) {
 }
 
 SearchResults.propTypes = {
-  results: PropTypes.object.isRequired,
+  results: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default SearchResults;
