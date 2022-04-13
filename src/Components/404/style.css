@@ -8,8 +8,8 @@
   gap: 30px;
 }
 .not-found-div .not-found {
-  color: #d71c3d;
-  font-size: 90px;
+  font-size: 50px;
+  margin-bottom: 100px;
 }
 .go-home {
   height: 40px;
@@ -22,7 +22,9 @@
   cursor: pointer;
 }
 .go-home:hover {
-  background-color: #d71c3ea6;
+  border: 1px solid #d71c3d;
+  color: #d71c3d;
+  background-color: #cfcece;
 }
 @media (max-width: 520px) {
   .not-found-div .not-found {
