@@ -13,17 +13,17 @@ function App() {
   const [loading, setLoading] = useState(true);
   const handleInputValue = (e) => {
     e.preventDefault();
-    axios
-      .get(`https://www.omdbapi.com/?apikey=8edd63b7&s=${inputValue}`)
-      .then((result) => {
-        const {
-          data: { Search },
-        } = result;
-        setResults(Search);
-        setInputValue('')
-        setLoading(false);
-      })
-      .catch((err) => console.log(err));
+      axios
+        .get(`https://www.omdbapi.com/?apikey=8edd63b7&s=${inputValue}`)
+        .then((result) => {
+          const {
+            data: { Search },
+          } = result;
+          setResults(Search);
+          setInputValue('')
+          setLoading(false);
+        })
+        .catch((err) => console.log(err));
   };
 
   return (
