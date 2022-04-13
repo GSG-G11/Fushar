@@ -7,7 +7,7 @@ function ResultCard(props) {
     <div className="movie-top-card" style={{paddingButtom: '10px'}}>
       <img className="movie-poster" src={movie.Poster} alt="poster" />
       <div className="movie-info">
-        <p movie-title>{movie.Title}</p>
+        <p>{movie.Title}</p>
         <p className="movie-ReleaseDate">Year: {movie.Year}</p>
         <p>Type: {movie.Type}</p>
       </div>

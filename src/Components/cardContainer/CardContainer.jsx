@@ -23,9 +23,7 @@ function CardContainer() {
       <h3 className="section-title">Most Popular</h3>
       {loading ? <Loading /> : <div className="cards-container">
         {topMovies.slice(0, 12).map((movie) => (
-          <>
-            <Card movie={movie} />
-          </>
+            <Card key={movie.id} movie={movie} />
         ))}
       </div>}
     </div>

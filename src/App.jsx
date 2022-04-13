@@ -9,7 +9,7 @@ import CardContainer from "./Components/cardContainer/CardContainer";
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [results, setResults] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   const handleInputValue = (e) => {
     e.preventDefault();
     axios
@@ -19,6 +19,8 @@ function App() {
           data: { Search },
         } = result;
         setResults(Search);
+        setInputValue('')
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   };
@@ -29,11 +31,12 @@ function App() {
         <Nav
           handleInputValue={handleInputValue}
           setInputValue={setInputValue}
+          inputValue={inputValue}
         />
         <hr />
         <Routes>
           <Route path="/" element={<CardContainer />} />
-          <Route path="/search" element={<SearchResults results={results} />} />
+          <Route path="/search" element={<SearchResults results={results} loading={loading} />} />
         </Routes>
       </Router>
     </div>

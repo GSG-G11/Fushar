@@ -5,7 +5,7 @@ import appIcon from './popcorn.png';
 import './nav.css';
 
 function Nav(props) {
-  const { handleInputValue, setInputValue } = props;
+  const { handleInputValue, setInputValue, inputValue } = props;
 
   let navigate = useNavigate();
   const submit = (e) => {
@@ -23,6 +23,7 @@ function Nav(props) {
       </Link>
       <form className="search" onSubmit={submit}>
         <input
+          value={inputValue}
           placeholder="search..."
           name="search"
           onChange={(e) => setInputValue(e.target.value)}
@@ -35,7 +36,8 @@ function Nav(props) {
 
 Nav.propTypes = {
   handleInputValue: PropTypes.func.isRequired,
-  setInputValue: PropTypes.string.isRequired,
+  setInputValue: PropTypes.func.isRequired,
+  inputValue: PropTypes.string,
 };
 
 export default Nav;
