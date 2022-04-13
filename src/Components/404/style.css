@@ -1,0 +1,31 @@
+.not-found-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 400px;
+  gap: 30px;
+}
+.not-found-div .not-found {
+  color: #d71c3d;
+  font-size: 90px;
+}
+.go-home {
+  height: 40px;
+  padding: 10px;
+  color: white;
+  border: none;
+  background-color: #d71c3d;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.go-home:hover {
+  background-color: #d71c3ea6;
+}
+@media (max-width: 520px) {
+  .not-found-div .not-found {
+    font-size: 30px;
+  }
+}
