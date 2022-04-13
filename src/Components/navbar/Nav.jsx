@@ -1,16 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link, useNavigate } from 'react-router-dom';
-import appIcon from './popcorn.png';
-import './nav.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, useNavigate } from "react-router-dom";
+import appIcon from "./popcorn.png";
+import "./nav.css";
 
 function Nav(props) {
   const { handleInputValue, setInputValue, inputValue } = props;
 
   let navigate = useNavigate();
   const submit = (e) => {
-    navigate('/search');
-    handleInputValue(e);
+    if (e.target[0].value.trim() !== "") {
+      navigate("/search");
+      handleInputValue(e);
+    } else {
+      e.preventDefault();
+      navigate("/");
+    }
   };
 
   return (
@@ -27,6 +32,7 @@ function Nav(props) {
           placeholder="search..."
           name="search"
           onChange={(e) => setInputValue(e.target.value)}
+          required
         />
         <button type="submit">Search</button>
       </form>

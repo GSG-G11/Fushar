@@ -42,5 +42,6 @@
 .movie-top-card:hover {
   transform: scale(1.1);
 }
-
-
+.title-search{
+  font-weight: bold;
+}
