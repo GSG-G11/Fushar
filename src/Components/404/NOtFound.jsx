@@ -7,7 +7,7 @@ function NOtFound() {
     <div className="not-found-div">
       <h1 className="not-found">404-page not found</h1>
       <Link to={'/'}>
-        <button className="go-home">GO HOME</button>
+        <button className="go-home">BACK TO HOME</button>
       </Link>
     </div>
   );
