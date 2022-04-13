@@ -3,6 +3,19 @@
   border-radius: 8px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: all 0.2s ease-in-out;
+  position: relative;
+  animation-name: card;
+  animation-duration: 4s;
+}
+@keyframes card {
+  0% {
+    top: 0px;
+    left: -500px;
+  }
+  25% {
+    left: 0px;
+    top: 0px;
+  }
 }
 .movie-top-card .movie-poster {
   width: 250px;
