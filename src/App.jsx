@@ -5,6 +5,7 @@ import axios from "axios";
 import Nav from "./Components/navbar/Nav";
 import SearchResults from "./Components/SearchResults/SearchResults";
 import CardContainer from "./Components/cardContainer/CardContainer";
+import ScrollButton from "./Components/Scroll/ScrollButton";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<CardContainer />} />
           <Route path="/search" element={<SearchResults results={results} loading={loading} />} />
         </Routes>
+        <ScrollButton />
       </Router>
     </div>
   );
